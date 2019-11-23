@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Create New Post</h1>
+    <div class="row p-4">
+        <div class="col-md-10">
+            <form action="/admin/posts/create" method="post">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Enter the title">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select name="status" id="status" class="form-control">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Topic</label>
+                    <select name="topic" id="topic" class="form-control">
+                        {{#each topics}}
+                            <option value="{{_id}}">{{title}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Content</label>
+                    <textarea name="description" id="description" rows="10" class="form-control" placeholder="Enter Your Content"></textarea>
+                </div>
+
+                <button class="btn btn-outline-success btn-lg" type="submit">Create Post</button>
+            </form>
+        </div>
+    </div>
+</div>
