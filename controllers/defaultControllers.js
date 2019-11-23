@@ -11,7 +11,7 @@ module.exports = {
         
         const posts = await Post.find({status: 'public'}).populate('user');
         const topics = await Topic.find();
-        res.render('default/index', {posts: posts, topics: topics, user: req.user});
+        res.render('default/index', {posts: posts,topics:topics, user: req.user});
     },
 
     getLogin: (req, res) => {

@@ -68,9 +68,6 @@
                         <td>${response.title}</td>
                         <td class="d-flex justify-content-center">
                             <a href="/admin/topic/edit/${response._id}" class="btn btn-sm btn-warning mr-2" role="button">Edit</a>
-                            <form action="/admin/topic/delete/${response._id}">
-                                <button class="btn btn-sm btn-danger" type="submit">Delete</button>
-                            </form>
                         </td>
                     </tr>`;
                     $('.category-list').append(newPost);
