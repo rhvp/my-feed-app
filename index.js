@@ -17,7 +17,7 @@ const expiryDate = new Date(Date.now() + 60 * 60 * 1000)
 
 app.use(session({
     secret: 'sody-secret',
-    saveUninitialized: false,
+    saveUninitialized: true,
     resave: true,
     cookie: {
         expires: expiryDate
