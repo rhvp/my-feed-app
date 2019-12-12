@@ -19,6 +19,12 @@ module.exports = {
         
     },
 
+    get_Post: (req, res) => {
+        Post.findById(req.params.id).populate('user').then(post=>{
+            res.render('default/post', {post: post})
+        })
+    },
+
     postLogin: (req, res, next) => {
         passport.authenticate('local', (err, user, info)=>{
             if(err){return next(err);}

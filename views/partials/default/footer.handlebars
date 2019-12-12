@@ -8,6 +8,16 @@
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function (){
+        let posts = [...document.querySelectorAll('#post-description')];
+        posts.map(post=>{
+          if(post.innerText.length > 50) {
+            post.innerText = post.innerText.substr(0, 50) + '...';
+          }
+        })
+      })
+    </script>
 
   </body>
 

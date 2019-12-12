@@ -4,7 +4,7 @@ const path = require('path');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const hbs = require('express-handlebars');
-const passport = require('passport')
+const passport = require('passport');
 
 const {selectOption } = require('./config/customFunctions')
 const app = express();

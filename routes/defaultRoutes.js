@@ -30,4 +30,7 @@ router.route('/register')
     
 router.route('/userExists')
     .get(defaultController.getUserExists)
+
+router.route('/post/:id')
+    .get(defaultController.get_Post);
 module.exports = router;
